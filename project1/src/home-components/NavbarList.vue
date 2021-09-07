@@ -7,7 +7,7 @@
                   <div class="dropdown">
                     <a class="btn btn-secondary dropdown-toggle btn-grad" href="#maps" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Maps</a>
                       <div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a  class="dropdown-item" href="../Bind/bind.html">Bind</a>
+                        <router-link  class="dropdown-item" to='/maps/bind'>Bind</router-link>
                         <a  class="dropdown-item" href="#haven">Haven</a>
                         <a  class="dropdown-item" href="#split">Split</a>
                         <a  class="dropdown-item" href="../Ascent/ascent.html">Ascent</a>

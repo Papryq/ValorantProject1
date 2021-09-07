@@ -7,14 +7,13 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    children: [
-      {
-        path: ":map",
-        name: "Map",
-        component: Map,
-        props: true
-      }
-    ]
+  },
+
+  {
+    path: "/maps/:name",
+    name: "Map",
+    component: Map,
+    props: true,
   },
 ]
 

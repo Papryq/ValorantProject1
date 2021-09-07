@@ -1,22 +1,25 @@
 <template>
   <div class="map-container">
-    <Intro />
+    <TheIntro />
     <div class="slider"></div>
     <TheNavbar />
     <LeftBox />
-
+    <AgentList :agents="agents" minimapPath="mapAscent3.png"/>
+    <TheFooter />
   </div>
 </template>
 
 <script>
 import TheIntro from '@/home-components/map-components/TheIntro'
 import LeftBox from '@/home-components/map-components/LeftBox'
+import AgentList from '@/home-components/map-components/AgentList'
 
 export default {
   name: 'Map',
   components: {
     TheIntro,
-    LeftBox
+    LeftBox,
+    AgentList
   },
 
   data() {
@@ -46,77 +49,77 @@ export default {
           {
             id: '1',
             name: 'Brimstone',
-            path: '@/assets/Brimstone1.png'
+            path: 'Brimstone1.png'
           },
           {
             id: '2',
             name: 'Omen',
-            path: '@/assets/Omen1.png'
+            path: 'Omen1.png'
           },
           {
             id: '3',
             name: 'Killjoy',
-            path: '@/assets/Killjoy1.png'
+            path: 'Killjoy1.png'
           },
                     {
             id: '4',
             name: 'Cypher',
-            path: '@/assets/Cypher1.png'
+            path: 'Cypher1.png'
           },
                     {
             id: '5',
             name: 'Sova',
-            path: '@/assets/Sova1.png'
+            path: 'Sova1.png'
           },
                     {
             id: '6',
             name: 'Sage',
-            path: '@/assets/Sage1.png'
+            path: 'Sage1.png'
           },
                     {
             id: '7',
-            name: 'Pheoenix',
-            path: '@/assets/Pheoenix1.png'
+            name: 'Phoenix',
+            path: 'Phoenix1.png'
           },
                     {
             id: '8',
             name: 'Jett',
-            path: '@/assets/Jett1.png'
+            path: 'Jett1.png'
           },
                     {
             id: '9',
             name: 'Reyna',
-            path: '@/assets/Reyna1.png'
+            path: 'Reyna1.png'
           },
                     {
             id: '10',
             name: 'Raze',
-            path: '@/assets/Raze1.png'
+            path: 'Raze1.png'
           },
                     {
             id: '11',
             name: 'Breach',
-            path: '@/assets/Breach1.png'
+            path: 'Breach1.png'
           },
           {
             id: '12',
             name: 'Skye',
-            path: '@/assets/Skye1.png'
+            path: 'Skye1.png'
           },
           {
             id: '13',
             name: 'Yoru',
-            path: '@/assets/Yoru1.png'
+            path: 'Yoru1.png'
           },
           {
             id: '14',
             name: 'Astra',
-            path: '@/assets/Astra1.png'
+            path: 'Astra1.png'
           },
           {
             id: '15',
             name: 'Kayo',
-            path: '@/assets/Kayo1.png'
+            path: 'Kayo1.png'
           },
         ]
       },
@@ -124,9 +127,9 @@ export default {
       setMaps() {
         this.maps = [
           {
-            id: 'Ascent',
+            id: '1',
             name: 'Ascent',
-            path: '@/assets/mapAscent3.png',
+            path: 'mapAscent3.png',
             bestAgents: [
               {
                 id: '1'
@@ -145,35 +148,35 @@ export default {
             ]
           },
           {
-            id: 'Haven',
+            id: '2',
             name: 'Haven',
             path: '',
             bestAgents: [],
             worstAgents: [],
           },
           {
-            id: 'Split',
+            id: '3',
             name: 'Split',
             path: '',
             bestAgents: [],
             worstAgents: [],
           },
           {
-            id: 'Bind',
+            id: '4',
             name: 'Bind',
             path: '',
             bestAgents: [],
             worstAgents: [],
           },
           {
-            id: 'Icebox',
+            id: '5',
             name: 'Icebox',
             path: '',
             bestAgents: [],
             worstAgents: [],
           },
           {
-            id: 'Breeze',
+            id: '6',
             name: 'Breeze',
             path: '',
             bestAgents: [],
@@ -184,3 +187,19 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+  .map-container {
+    background-color: black !important;
+  }
+
+  .slider {
+    background: #212529;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+  }
+</style>
