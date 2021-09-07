@@ -1,10 +1,14 @@
 <template>
   <div class="map-container">
-    <TheIntro />
-    <div class="slider"></div>
+    <!-- <TheIntro />
+    <div class="slider"></div> -->
     <TheNavbar />
-    <LeftBox />
-    <AgentList :agents="agents" minimapPath="mapAscent3.png"/>
+    <div class="container-fluid d-flex py-5 agents-wrapper">
+      <div class="row">
+        <LeftBox />
+        <AgentList :agents="agents" minimapPath="mapAscent3.png"/>
+      </div>
+    </div>
     <TheFooter />
   </div>
 </template>
@@ -36,12 +40,10 @@ export default {
 
     methods: {
       executeStartAnimation() {
-        const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-        tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
-        tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
-        tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
-        tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
+        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".intro", { y: "-100%", duration: 1 }, "-=1");
+        gsap.timeline({ defaults: { ease: "power1.out" } }).fromTo(".navbar", { opacity: 0 }, { opacity: 1, duration: 1 });
       },
 
       setAgents() {
@@ -202,4 +204,5 @@ export default {
     height: 100%;
     transform: translateY(100%);
   }
+
 </style>

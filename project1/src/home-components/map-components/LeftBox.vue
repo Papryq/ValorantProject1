@@ -1,7 +1,6 @@
 <template>
     <!--LeftBox-->
-    <div class="d-sm-flex flex-row">
-        <div class="flex-col">
+        <div class="col-xl-3 col-12">
             <div class="left-box my-4">
                 <h1 class="text-white mx-4">Best Agents</h1>
                 <div class="my-4 ">
@@ -15,7 +14,6 @@
                     </div>
                </div>
             </div>
-    </div>
 </template>
 
 <script>

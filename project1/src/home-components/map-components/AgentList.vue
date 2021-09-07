@@ -1,12 +1,15 @@
 <template>
     <!--AgentList-->
-    <div class="d-flex px-4">
-        <div class="agent-list">
-            <AgentButton :key="agent.id" v-for="agent in agents" :agent="agent" />
-
-            <!--MiniMap-->
-            <div class="mini-map">
-                <img :src="require(`@/assets/${minimapPath}`)" class="img-fluid">
+    <div class="col-lg-9">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="agent-list col-lg-3">
+                    <AgentButton :key="agent.id" v-for="agent in agents" :agent="agent" />
+                </div>
+                <!--MiniMap-->
+                <div class="mini-map col-lg-7">
+                    <img :src="require(`@/assets/${minimapPath}`)" class="img-fluid">
+                </div>
             </div>
         </div>
     </div>
@@ -34,8 +37,7 @@ export default {
     }
 
     .mini-map {
-        margin-left: 2rem;
-        padding-bottom: 3rem;
+        height: 20rem;
         border-left: solid 3px #212529;
         border-right: solid 3px #212529;
     }
