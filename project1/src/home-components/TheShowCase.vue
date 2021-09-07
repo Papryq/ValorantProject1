@@ -1,5 +1,5 @@
 <template>
-              <section class=" text-light p-5 my-2">
+        <section class=" text-light p-5 my-2">
             <div class="container">
                <div class="d-sm-flex justify-content-between">
                   <img class="img-fluid w-50 d-none d-sm-block omenAnimation" src="/photos/photo1.png" alt="">
@@ -9,7 +9,7 @@
                       </div>
                 </div>
             </div>
-          </section>
+        </section>
 </template>
 
 <script>
