@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand px-3" href="../Main/index.html">
+        <a class="navbar-brand px-3" href="">
             <i class="bi bi-github"> Valorant Project</i>
         </a>
     </nav>
