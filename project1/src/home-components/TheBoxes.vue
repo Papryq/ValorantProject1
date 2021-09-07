@@ -1,7 +1,7 @@
 <template>
           <section>
             <div class="container">
-              <div class="row text-center g-5">
+              <div class="row text-center py-3">
                 <div class="col-md">
                  <div class="card shadow-lg" style="width: 18rem;">
                    <img src="" class="card-img-top" alt="">
@@ -48,5 +48,10 @@ export default {
 </script>
 
 <style scoped>
+ .col-md {
+   padding: 0 10px 40px 10px;
+ }
+
+
 
 </style>

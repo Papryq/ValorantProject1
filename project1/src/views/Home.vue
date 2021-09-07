@@ -2,7 +2,7 @@
   <div class="home">
 
     <TheNavbar />
-    <TheShowChase />
+    <TheShowCase />
     <TheBoxes />
     <TheTestomonial />
     <TheForm />
