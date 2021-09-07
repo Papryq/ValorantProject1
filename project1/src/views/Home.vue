@@ -1,6 +1,7 @@
 <template>
   <div class="home">
 
+    <TheNavbar />
     <TheShowChase />
     <TheBoxes />
     <TheTestomonial />
@@ -16,6 +17,7 @@ import TheFooter from '@/home-components/TheFooter.vue'
 import TheTestomonial from '@/home-components/TheTestomonial.vue'
 import TheBoxes from '@/home-components/TheBoxes.vue'
 import TheShowCase from '@/home-components/TheShowCase.vue'
+import TheNavbar from '@/home-components/TheNavbar.vue'
 
 
 export default {
@@ -26,6 +28,7 @@ export default {
     TheTestomonial,
     TheBoxes,
     TheShowCase,
+    TheNavbar,
   }
 }
 </script>
