@@ -3,7 +3,7 @@
     <!-- <TheIntro />
     <div class="slider"></div> -->
     <TheNavbar />
-    <div class="container-fluid d-flex py-5 agents-wrapper align-items-center">
+    <div class="container-fluid agents-wrapper">
       <div class="row">
         <LeftBox />
         <AgentList :agents="agents" minimapPath="mapAscent3.png"/>
@@ -131,6 +131,7 @@ export default {
           {
             id: '1',
             name: 'Ascent',
+            urlName: 'ascent',
             path: 'mapAscent3.png',
             bestAgents: [
               {
@@ -152,6 +153,7 @@ export default {
           {
             id: '2',
             name: 'Haven',
+            urlName: 'haven',
             path: '',
             bestAgents: [],
             worstAgents: [],
@@ -159,6 +161,7 @@ export default {
           {
             id: '3',
             name: 'Split',
+            urlName: 'split',
             path: '',
             bestAgents: [],
             worstAgents: [],
@@ -166,6 +169,7 @@ export default {
           {
             id: '4',
             name: 'Bind',
+            urlName: 'bind',
             path: '',
             bestAgents: [],
             worstAgents: [],
@@ -173,6 +177,7 @@ export default {
           {
             id: '5',
             name: 'Icebox',
+            urlName: 'icebox',
             path: '',
             bestAgents: [],
             worstAgents: [],
@@ -180,6 +185,7 @@ export default {
           {
             id: '6',
             name: 'Breeze',
+            urlName: 'breeze',
             path: '',
             bestAgents: [],
             worstAgents: [],

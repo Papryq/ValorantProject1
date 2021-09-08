@@ -1,6 +1,6 @@
 <template>
     <!--LeftBox-->
-        <div class="col-xl-3 col-12">
+        <div class="col-xl-2 col-12">
             <div class="left-box p-4 my-4">
                 <h1 class="text-white mx-4-md">Best Agents</h1>
                 <div class="my-4 ">
