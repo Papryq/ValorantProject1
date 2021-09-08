@@ -3,7 +3,7 @@
     <!-- <TheIntro />
     <div class="slider"></div> -->
     <TheNavbar />
-    <div class="container-fluid d-flex py-5 agents-wrapper">
+    <div class="container-fluid d-flex py-5 agents-wrapper align-items-center">
       <div class="row">
         <LeftBox />
         <AgentList :agents="agents" minimapPath="mapAscent3.png"/>
@@ -193,6 +193,10 @@ export default {
 <style scoped>
   .map-container {
     background-color: black !important;
+  }
+
+  .agents-wrapper {
+    min-height: 50.1rem;
   }
 
   .slider {

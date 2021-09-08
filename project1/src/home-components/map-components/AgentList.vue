@@ -1,14 +1,14 @@
 <template>
     <!--AgentList-->
-    <div class="col-lg-9">
+    <div class="col-xl-9">
         <div class="container-fluid">
-            <div class="row">
-                <div class="agent-list col-lg-3">
+            <div class="row d-flex justify-content-xl-center justify-content-between">
+                <div class="agent-list col-lg-4 me-5-xl">
                     <AgentButton :key="agent.id" v-for="agent in agents" :agent="agent" />
                 </div>
                 <!--MiniMap-->
-                <div class="mini-map col-lg-7">
-                    <img :src="require(`@/assets/${minimapPath}`)" class="img-fluid">
+                <div class="minimap-wrapper col-lg-7 ms-5-xl d-flex justify-content-center text-center">
+                    <img :src="require(`@/assets/${minimapPath}`)" class="img-fluid minimap">
                 </div>
             </div>
         </div>
@@ -32,12 +32,8 @@ export default {
 </script>
 
 <style scoped>
-    .agent-list {
-        margin-left: 8rem;
-    }
 
-    .mini-map {
-        height: 20rem;
+    .minimap-wrapper {
         border-left: solid 3px #212529;
         border-right: solid 3px #212529;
     }
