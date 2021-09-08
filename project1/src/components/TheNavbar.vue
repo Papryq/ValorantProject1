@@ -1,8 +1,8 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand px-3" href="">
+        <router-link class="navbar-brand px-3" to="/">
             <i class="bi bi-github">Valorant Project</i>
-        </a>
+        </router-link>
         <NavbarCollapse />
         <NavbarList />
     </nav>
