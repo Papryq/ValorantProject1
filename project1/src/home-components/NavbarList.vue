@@ -8,11 +8,11 @@
                     <a class="btn btn-secondary dropdown-toggle btn-grad" href="#maps" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Maps</a>
                       <div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <router-link  class="dropdown-item" to='/maps/bind'>Bind</router-link>
-                        <a  class="dropdown-item" href="#haven">Haven</a>
-                        <a  class="dropdown-item" href="#split">Split</a>
-                        <a  class="dropdown-item" href="../Ascent/ascent.html">Ascent</a>
-                        <a  class="dropdown-item" href="#icebox">Icebox</a>
-                        <a  class="dropdown-item" href="#breeze">Breeze</a>
+                        <router-link class="dropdown-item" to='/maps/haven'>Haven</router-link>
+                        <router-link class="dropdown-item" to='/maps/split'>Split</router-link>
+                        <router-link class="dropdown-item" to='/maps/ascent'>Ascent</router-link>
+                        <router-link class="dropdown-item" to='/maps/icebox'>Icebox</router-link>
+                        <router-link class="dropdown-item" to='/maps/breeze'>Breeze</router-link>
                       </div>
                   </div>
                 </li>
@@ -24,6 +24,45 @@
 
 export default {
   name: 'NavbarList',
+  data() {
+    return {
+      mapList: []
+    }
+  },
+
+  created() {
+    this.mapList = [
+      {
+        id: '1',
+        name: 'bind'
+      },
+
+      {
+        id: '2',
+        name: 'haven'
+      },
+
+      {
+        id: '3',
+        name: 'split'
+      },
+
+      {
+        id: '4',
+        name: 'ascent'
+      },
+
+      {
+        id: '5',
+        name: 'icebox'
+      },
+
+      {
+        id: '6',
+        name: 'breeze'
+      },
+    ]
+  }
 }
 </script>
 

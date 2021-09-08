@@ -6,7 +6,7 @@
     <div class="container-fluid agents-wrapper">
       <div class="row">
         <LeftBox />
-        <AgentList :agents="agents" minimapPath="mapAscent3.png"/>
+        <AgentList :agents="agents" :minimapPath="currentMapImgPath"/>
       </div>
     </div>
     <TheFooter />
@@ -26,16 +26,23 @@ export default {
     AgentList
   },
 
+  props: {
+    name: String
+  },
+
   data() {
     return {
       agents: [],
-      maps: []
+      maps: [],
+      currentMapImgPath: '',
     }
   },
 
   created() {
       this.setAgents()
+      this.setMaps()
       this.executeStartAnimation()
+      this.setCurrentMapPath()
     },
 
     methods: {
@@ -44,6 +51,11 @@ export default {
         gsap.timeline({ defaults: { ease: "power1.out" } }).to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
         gsap.timeline({ defaults: { ease: "power1.out" } }).to(".intro", { y: "-100%", duration: 1 }, "-=1");
         gsap.timeline({ defaults: { ease: "power1.out" } }).fromTo(".navbar", { opacity: 0 }, { opacity: 1, duration: 1 });
+      },
+
+      setCurrentMapPath() {
+        const currentMap = this.maps.find(map => map.urlName == this.name)
+        this.currentMapImgPath = currentMap.path
       },
 
       setAgents() {
@@ -154,7 +166,7 @@ export default {
             id: '2',
             name: 'Haven',
             urlName: 'haven',
-            path: '',
+            path: 'mapAscent3.png',
             bestAgents: [],
             worstAgents: [],
           },
@@ -162,7 +174,7 @@ export default {
             id: '3',
             name: 'Split',
             urlName: 'split',
-            path: '',
+            path: 'mapAscent3.png',
             bestAgents: [],
             worstAgents: [],
           },
@@ -170,7 +182,7 @@ export default {
             id: '4',
             name: 'Bind',
             urlName: 'bind',
-            path: '',
+            path: 'mapAscent3.png',
             bestAgents: [],
             worstAgents: [],
           },
@@ -178,7 +190,7 @@ export default {
             id: '5',
             name: 'Icebox',
             urlName: 'icebox',
-            path: '',
+            path: 'mapAscent3.png',
             bestAgents: [],
             worstAgents: [],
           },
@@ -186,7 +198,7 @@ export default {
             id: '6',
             name: 'Breeze',
             urlName: 'breeze',
-            path: '',
+            path: 'mapAscent3.png',
             bestAgents: [],
             worstAgents: [],
           },
