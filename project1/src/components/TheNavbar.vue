@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import NavbarList from '@/home-components/NavbarList.vue'
-import NavbarCollapse from '@/home-components/NavbarCollapse.vue'
+import NavbarList from '@/components/NavbarList.vue'
+import NavbarCollapse from '@/components/NavbarCollapse.vue'
 
 
 export default {

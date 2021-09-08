@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import TheFooter from './home-components/TheFooter'
-import TheNavbar from './home-components/TheNavbar'
+import TheFooter from './components/TheFooter'
+import TheNavbar from './components/TheNavbar'
 
 
 

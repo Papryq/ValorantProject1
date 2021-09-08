@@ -12,12 +12,12 @@
 
 <script>
 // @ is an alias to /src
-import TheForm from '@/home-components/TheForm.vue'
-import TheFooter from '@/home-components/TheFooter.vue'
-import TheTestomonial from '@/home-components/TheTestomonial.vue'
-import TheBoxes from '@/home-components/TheBoxes.vue'
-import TheShowCase from '@/home-components/TheShowCase.vue'
-import TheNavbar from '@/home-components/TheNavbar.vue'
+import TheForm from '@/components/home-components/TheForm.vue'
+import TheFooter from '@/components/TheFooter.vue'
+import TheTestomonial from '@/components/home-components/TheTestomonial.vue'
+import TheBoxes from '@/components/home-components/TheBoxes.vue'
+import TheShowCase from '@/components/home-components/TheShowCase.vue'
+import TheNavbar from '@/components/TheNavbar.vue'
 
 
 export default {

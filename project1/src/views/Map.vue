@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import TheIntro from '@/home-components/map-components/TheIntro'
-import LeftBox from '@/home-components/map-components/LeftBox'
-import AgentList from '@/home-components/map-components/AgentList'
+import TheIntro from '@/components/map-components/TheIntro'
+import LeftBox from '@/components/map-components/LeftBox'
+import AgentList from '@/components/map-components/AgentList'
 
 export default {
   name: 'Map',
