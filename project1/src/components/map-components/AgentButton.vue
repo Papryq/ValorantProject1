@@ -1,5 +1,6 @@
 <template>
-    <button class="dropdown-item agentButton text-light" :id="agent.id"><img :src="require(`@/assets/${agent.path}`)">
+    <button :class="agentButtonClass" :id="agent.id" @click="this.$emit('selectAgent', agent.id)">
+        <img :src="require(`@/assets/${agent.path}`)">
         {{agent.name}}
     </button>
 </template>
@@ -8,7 +9,23 @@
 export default {
     name: 'AgentButton',
     props: {
-        agent: Object
-    }
+        agent: Object,
+        agentButtonClass: String
+    },
+
 }
 </script>
+
+<style scoped>
+    .selected {
+        color: green;
+    }
+
+    .dropdown-item:hover {
+        background-color: #444
+    }
+
+    .dropdown-item:focus {
+        background-color: black;
+    }
+</style>

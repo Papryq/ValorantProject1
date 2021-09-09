@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row d-flex justify-content-xl-center justify-content-between">
                 <div class="agent-list col-lg-2 me-5-xl py-4">
-                    <AgentButton :key="agent.id" v-for="agent in agents" :agent="agent" />
+                    <AgentButton :key="agent.id" v-for="agent in agents" :agent="agent" @selectAgent="changeSelectedAgentId" :agentButtonClass="getAgentButtonClass(agent.id)"  />
                 </div>
                 <!--MiniMap-->
                 <div class="minimap-wrapper col-lg-10 ms-5-xl d-flex justify-content-center text-center">
@@ -25,9 +25,27 @@ export default {
         minimapPath: String
     },
 
+
     components: {
         AgentButton
-    }
+    },
+
+    methods: {
+        changeSelectedAgentId(agentId) {
+            this.selectedAgentId=agentId
+        },
+
+        getAgentButtonClass(agentId) {
+            const agentButtonClass = (this.selectedAgentId===agentId ? "dropdown-item selected": "dropdown-item text-light")
+            return agentButtonClass
+        }
+    },
+
+    data() {
+        return {
+            selectedAgentId: '0',
+        }
+    },
 }
 </script>
 
