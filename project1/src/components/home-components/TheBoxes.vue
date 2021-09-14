@@ -11,12 +11,9 @@
                   </div>
                 </div>
                 <div class="col-md">
-                  <div       @mouseover="hover = true"
-                              @mouseleave="hover = false">
-                    <video width="320" height="240">
-                      <source src="@/assets/Video/fela.mp4" type="video/mp4">
-                      <source src ="@/assets/Video/fela.mp4" type="video/ogg">
-                    </video>              
+                           <div class="player-container">
+                            <vue3-video-player @play="your_method" src="./videos/your_video.mp4"></vue3-video-player>
+                            </div>       
                   </div>
                 </div>
                  <div class="col-md">
