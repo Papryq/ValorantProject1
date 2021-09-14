@@ -3,19 +3,20 @@
             <div class="container">
               <div class="row text-center py-3">
                 <div class="col-md">
-                 <div class="card shadow-lg" style="width: 18rem;">
-                   <img src="" class="card-img-top" alt="">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
+                  <div   @mouserover="actionHover()">
+                    <video width="320" height="240">
+                      <source src="@/assets/Video/fela.mp4" type="video/mp4">
+                      <source src ="@/assets/Video/fela.mp4" type="video/ogg">
+                    </video>              
                   </div>
                 </div>
                 <div class="col-md">
-                  <div class="card shadow-lg" style="width: 18rem;">
-                    <img src="" class="card-img-top" alt="">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
+                  <div       @mouseover="hover = true"
+                              @mouseleave="hover = false">
+                    <video width="320" height="240">
+                      <source src="@/assets/Video/fela.mp4" type="video/mp4">
+                      <source src ="@/assets/Video/fela.mp4" type="video/ogg">
+                    </video>              
                   </div>
                 </div>
                  <div class="col-md">
