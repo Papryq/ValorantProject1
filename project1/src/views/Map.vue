@@ -183,7 +183,7 @@ export default {
             id: '4',
             name: 'Bind',
             urlName: 'bind',
-            path: 'BindMap.png',
+            path: 'BindMap1.png',
             bestAgents: [],
             worstAgents: [],
           },
