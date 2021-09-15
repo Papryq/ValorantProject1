@@ -58,8 +58,22 @@ export default {
     },
 
     methods: {
+<<<<<<< HEAD
+      executeStartAnimation() {
+        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".intro", { y: "-100%", duration: 1 }, "-=1");
+        gsap.timeline({ defaults: { ease: "power1.out" } }).fromTo(".navbar", { opacity: 0 }, { opacity: 1, duration: 1 });
+      },
+
+
+
+      setCurrentMapPath() {
+        const currentMap = this.maps.find(map => map.urlName == this.name)
+=======
       setCurrentMapPath(name) {
         const currentMap = this.maps.find(map => map.urlName == name)
+>>>>>>> a263609c2591b67ffa166a4ca2d01fd2546a1bf5
         this.currentMapImgPath = currentMap.path
       },
 
