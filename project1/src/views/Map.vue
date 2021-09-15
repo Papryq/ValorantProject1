@@ -54,6 +54,8 @@ export default {
         gsap.timeline({ defaults: { ease: "power1.out" } }).fromTo(".navbar", { opacity: 0 }, { opacity: 1, duration: 1 });
       },
 
+
+
       setCurrentMapPath() {
         const currentMap = this.maps.find(map => map.urlName == this.name)
         this.currentMapImgPath = currentMap.path

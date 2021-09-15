@@ -3,7 +3,7 @@
 
     <TheNavbar />
     <TheShowCase />
-    <TheBoxes />
+    <TheBoxes  :clips="clips"/>
     <TheTestomonial />
     <TheForm />
     <TheFooter />
@@ -29,6 +29,44 @@ export default {
     TheBoxes,
     TheShowCase,
     TheNavbar,
+  },
+  data() {
+    return {
+      clips: [],
+    }
+  },
+
+  created() {
+    this.setLineupClips()
+  },
+
+  methods: {
+
+    setLineupClips() {
+      this.clips = [
+          {
+            id: '1',
+            name: 'clip1',
+            path: '@/assets/Video/video1.mp4'
+          },
+          {
+            id: '2',
+            name: 'clip2',
+            path: '@/assets/Video/video2.mp4'
+          },
+                    {
+            id: '3',
+            name: 'clip3',
+            path: '@/assets/Video/video3.mp4'
+          },
+          {
+            id: '4',
+            name: 'clip4',
+            path: '@/assets/Video/video4.mp4'
+          },
+      ]
+    },
+
   }
 }
 </script>
