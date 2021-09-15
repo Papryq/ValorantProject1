@@ -31,6 +31,15 @@ export default {
     name: String
   },
 
+  watch: {
+    $route(to, from) {
+      if(to!==from && to.path !== '/') {
+        const name = to.params.name;
+        this.setCurrentMapPath(name)
+      }
+    }
+  },
+
   data() {
     return {
       agents: [],
@@ -42,20 +51,12 @@ export default {
   created() {
       this.setAgents()
       this.setMaps()
-      this.executeStartAnimation()
-      this.setCurrentMapPath()
+      this.setCurrentMapPath(this.name)
     },
 
     methods: {
-      executeStartAnimation() {
-        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".text", { y: "0%", duration: 1, stagger: 0.25 });
-        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
-        gsap.timeline({ defaults: { ease: "power1.out" } }).to(".intro", { y: "-100%", duration: 1 }, "-=1");
-        gsap.timeline({ defaults: { ease: "power1.out" } }).fromTo(".navbar", { opacity: 0 }, { opacity: 1, duration: 1 });
-      },
-
-      setCurrentMapPath() {
-        const currentMap = this.maps.find(map => map.urlName == this.name)
+      setCurrentMapPath(name) {
+        const currentMap = this.maps.find(map => map.urlName == name)
         this.currentMapImgPath = currentMap.path
       },
 
