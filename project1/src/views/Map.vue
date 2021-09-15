@@ -6,7 +6,7 @@
     <div class="container-fluid agents-wrapper">
       <div class="row">
         <LeftBox />
-        <AgentList :agents="agents" :minimapPath="currentMapImgPath"/>
+        <AgentList :agents="agents" :minimapPath="currentMapImgPath" :points="currentMapPoints"/>
       </div>
     </div>
     <TheFooter />
@@ -36,6 +36,7 @@ export default {
       if(to!==from && to.path !== '/') {
         const name = to.params.name;
         this.setCurrentMapPath(name)
+        this.setCurrentMapPoints(name)
       }
     }
   },
@@ -45,6 +46,7 @@ export default {
       agents: [],
       maps: [],
       currentMapImgPath: '',
+      currentMapPoints: []
     }
   },
 
@@ -52,12 +54,18 @@ export default {
       this.setAgents()
       this.setMaps()
       this.setCurrentMapPath(this.name)
+      this.setCurrentMapPoints(this.name)
     },
 
     methods: {
       setCurrentMapPath(name) {
         const currentMap = this.maps.find(map => map.urlName == name)
         this.currentMapImgPath = currentMap.path
+      },
+
+      setCurrentMapPoints(name) {
+        const currentMap = this.maps.find(map => map.urlName == name)
+        this.currentMapPoints = currentMap.points
       },
 
       setAgents() {
@@ -147,6 +155,43 @@ export default {
             name: 'Ascent',
             urlName: 'ascent',
             path: 'AscentMap.png',
+            points: [
+              {
+                id: '1',
+                left: '66.5%',
+                top: '24.5%',
+              },
+              {
+                id: '2',
+                left: '58.5%',
+                top: '25.5%',
+              },
+              {
+                id: '3',
+                left: '57.5%',
+                top: '41%',
+              },
+              {
+                id: '4',
+                left: '55.5%',
+                top: '68%',
+              },
+              {
+                id: '5',
+                left: '60%',
+                top: '69.5%',
+              },
+              {
+                id: '6',
+                left: '75.5%',
+                top: '73.5%',
+              },
+              {
+                id: '7',
+                left: '60%',
+                top: '89%',
+              },
+            ],
             bestAgents: [
               {
                 id: '1'
@@ -169,6 +214,38 @@ export default {
             name: 'Haven',
             urlName: 'haven',
             path: 'HavenMap.png',
+            points: [
+              {
+                id: '1',
+                left: '56%',
+                top: '40.7%',
+              },
+              {
+                id: '2',
+                left: '65.4%',
+                top: '76%',
+              },
+              {
+                id: '3',
+                left: '70.6%',
+                top: '74.5%',
+              },
+              {
+                id: '4',
+                left: '67%',
+                top: '34%',
+              },
+              {
+                id: '5',
+                left: '71.5%',
+                top: '38.5%',
+              },
+              {
+                id: '6',
+                left: '72.5%',
+                top: '45%',
+              },
+            ],
             bestAgents: [],
             worstAgents: [],
           },
@@ -177,6 +254,23 @@ export default {
             name: 'Split',
             urlName: 'split',
             path: 'SplitMap.png',
+            points: [
+              {
+                id: '1',
+                left: '65.3%',
+                top: '13.3%',
+              },
+              {
+                id: '2',
+                left: '58%',
+                top: '17%',
+              },
+              {
+                id: '3',
+                left: '68.8%',
+                top: '72.2%',
+              },
+            ],
             bestAgents: [],
             worstAgents: [],
           },
@@ -185,6 +279,23 @@ export default {
             name: 'Bind',
             urlName: 'bind',
             path: 'BindMap1.png',
+            points: [
+              {
+                id: '1',
+                left: '57.2%',
+                top: '42.5%',
+              },
+              {
+                id: '2',
+                left: '56.7%',
+                top: '68.5%',
+              },
+              {
+                id: '3',
+                left: '56.5%',
+                top: '82.5%',
+              },
+            ],
             bestAgents: [],
             worstAgents: [],
           },
@@ -193,6 +304,18 @@ export default {
             name: 'Icebox',
             urlName: 'icebox',
             path: 'IceboxMap.png',
+            points: [
+              {
+                id: '1',
+                left: '55%',
+                top: '26%',
+              },
+              {
+                id: '2',
+                left: '54.5%',
+                top: '84.5%',
+              },
+            ],
             bestAgents: [],
             worstAgents: [],
           },
@@ -201,6 +324,23 @@ export default {
             name: 'Breeze',
             urlName: 'breeze',
             path: 'BreezeMap.png',
+            points: [
+              {
+                id: '1',
+                left: '52.5%',
+                top: '15%',
+              },
+              {
+                id: '2',
+                left: '45.5%',
+                top: '56.5%',
+              },
+              {
+                id: '3',
+                left: '73%',
+                top: '46%',
+              },
+            ],
             bestAgents: [],
             worstAgents: [],
           },
