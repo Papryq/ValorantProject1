@@ -29,6 +29,8 @@ export default {
     .navbar
     {
         border-bottom:solid 1px #212529;
+        z-index: 100;
+        position: sticky;
     }
 
 </style>

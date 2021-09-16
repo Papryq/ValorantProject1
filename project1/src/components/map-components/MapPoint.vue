@@ -1,5 +1,5 @@
 <template>
-    <button class="map-point" :style="point">
+    <button @click="$emit('activeLineupWrapper')" class="map-point" :style="point">
     </button>
 </template>
 
