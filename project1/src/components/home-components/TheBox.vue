@@ -1,9 +1,11 @@
 <template>
                 <div class="col-xl-3">
-                    <video width="200" height="280" loop="" @mouseover="videoControl" @mouseleave="videoControlStop">
-                      <source :src="(`@/assets/Video/${clip.path}`)" type="video/mp4">
-                      <source  :src="(`@/assets/Video/${clip.path}`)" type="video/ogg">
-                    </video>   
+                    <video muted width="300" height="480" loop="" :id="clip.id" @mouseover="videoControl(true, clip.id)" @mouseleave="videoControl(false, clip.id)">
+                      <source :src="require(`@/assets/video/${clip.path}`)" type="video/mp4" >
+                      <source  :src="require(`@/assets/video/${clip.path}`)" type="video/ogg">
+                    </video>  
+
+                    <h1> {{ clip.name }}</h1> 
                   </div>
 </template>
 
@@ -17,18 +19,22 @@ export default {
     },
 
       methods: {
-        videoControl() {
+        videoControl(isHovering) {
           const videoPlayer = document.querySelector('video');
-            if(videoPlayer.paused){
-              videoPlayer.playbackRate = 2;
+            if(isHovering == true)
+            {
+              console.log('Play')
               videoPlayer.play();
             }
-            else {
-              videoControlStop = videoPlayer.currentTime = 0;
+            else if (isHovering == false)
+            {
               videoPlayer.pause();
+              console.log('Stop')
             }
-        }
-      }
+            }
+
+
+    }
 
 }
 

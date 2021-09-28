@@ -47,22 +47,22 @@ export default {
           {
             id: '1',
             name: 'clip1',
-            path: '@/assets/Video/video1.mp4'
+            path: '1.mp4'
           },
           {
             id: '2',
             name: 'clip2',
-            path: '@/assets/Video/video2.mp4'
+            path: '2.mp4'
           },
                     {
             id: '3',
             name: 'clip3',
-            path: '@/assets/Video/video3.mp4'
+            path: '3.mp4'
           },
           {
             id: '4',
             name: 'clip4',
-            path: '@/assets/Video/video4.mp4'
+            path: '4.mp4'
           },
       ]
     },
