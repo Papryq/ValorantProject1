@@ -22,6 +22,11 @@ export default {
         position: absolute;
         border: 0;
         border-radius: 50%;
-        box-shadow: 0rem 0rem 1.5rem .7rem yellow;
+    }
+
+    .map-point:hover {
+        background-color: yellow;
+        box-shadow: 0rem 0rem 1.2rem .3rem yellow;
+        transition: all 0.1s ease;
     }
 </style>
