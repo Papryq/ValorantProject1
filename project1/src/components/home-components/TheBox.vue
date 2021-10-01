@@ -2,7 +2,7 @@
                 <div class="col-xl-3 clip">
                   <h1> {{ clip.name }}</h1> 
                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ut!</p>
-                    <video muted controls width="300" height="200" loop="" @mouseover="videoControl(true)" @mouseleave="videoControl(false)">
+                    <video muted controls width="300" height="200" loop="" @mouseover="videoControl(true)" @mouseleave="videoControl(false)" :data-clip-id="clip.id">
                       <source :src="require(`@/assets/video/${clip.path}`)" type="video/mp4" >
                       <source  :src="require(`@/assets/video/${clip.path}`)" type="video/ogg">
                     </video>  
@@ -21,7 +21,7 @@ export default {
 
       methods: {
         videoControl(isHovering) {
-          const videoPlayer = document.querySelector('video');
+          const videoPlayer = document.querySelector(`[data-clip-id='${this.clip.id}']`);
             if(isHovering == true)
             {
               console.log('Play')
