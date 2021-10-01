@@ -7,21 +7,65 @@
                 </button>
             </div>
         </div>
+
+        <div class="row justify-content-xl-start justify-content-center">
+            <VideoWrapper :key="video.id" v-for="video in videos" :video="video" />
+        </div>
     </div>
 </template>
 
 <script>
+import VideoWrapper from './VideoWrapper.vue'
+
 export default {
     name: 'MapLineupsVideoWrapper',
     props: {
         isActive: Boolean
-    }
+    },
+
+    components: {
+        VideoWrapper
+    },
+
+    data() {
+        return {
+            videos: []
+        }
+    },
+
+    created() {
+        this.videos = [
+        {
+            id: '1',
+            name: 'clip1',
+            path: '1.mp4'
+        },
+
+        {
+            id: '2',
+            name: 'clip2',
+            path: '2.mp4'
+        },
+
+        {
+            id: '3',
+            name: 'clip3',
+            path: '3.mp4'
+        },
+
+        {
+            id: '4',
+            name: 'clip4',
+            path: '4.mp4'
+        },
+      ]
+    },
 }
 </script>
 
 <style scoped>
     .map-lineups-video-wrapper {
-        background-color: #ffffffd1;
+        background-color: #ffffffee;
         position: absolute;
         height: 100%;
         opacity: 0;
@@ -41,6 +85,16 @@ export default {
         border: 0;
         width: 2.8rem;
         height: 2.8rem;
+    }
+
+    .video-wrapper {
+        opacity: 0;
+    }
+
+    .active .video-wrapper {
+        opacity: 1;
+        transition-delay: 2s;
+        transition: ease-in 1s;
     }
     
 </style>
