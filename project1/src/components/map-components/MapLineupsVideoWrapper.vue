@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
     .map-lineups-video-wrapper {
-        background-color: #ffffffee;
+        background-color: #4d4d4dee;
         position: absolute;
         height: 100%;
         opacity: 0;

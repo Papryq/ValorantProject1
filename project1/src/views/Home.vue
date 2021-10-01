@@ -74,6 +74,7 @@ export default {
 <style>
   .home{
     background: black;
+    overflow: hidden;
   }
 
 </style>
