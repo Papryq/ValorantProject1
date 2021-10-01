@@ -28,5 +28,6 @@ export default {
     .minimap-wrapper {
         border-left: solid 3px #212529;
         border-right: solid 3px #212529;
+        position: relative;
     }
 </style>

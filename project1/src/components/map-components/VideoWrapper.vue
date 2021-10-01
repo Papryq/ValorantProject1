@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="col-12 px-0">
-                <video muted controls class="w-100" height="120" loop="" @mouseover="videoControl(true)" @mouseleave="videoControl(false)" :data-video-id="video.id">
+                <video muted class="w-100" height="120" loop="" @mouseover="videoControl(true)" @mouseleave="videoControl(false)" :data-video-id="video.id">
                     <source :src="require(`@/assets/video/${video.path}`)" type="video/mp4" >
                     <source  :src="require(`@/assets/video/${video.path}`)" type="video/ogg">
                 </video>
