@@ -71,12 +71,12 @@ export default {
         opacity: 0;
         transform: translateY(-100%);
         transition: all .5s;
+        z-index: 90;
     }
 
     .active {
         opacity: 1;
         transform: translateY(0);
-        z-index: 90;
     }
 
     button {
