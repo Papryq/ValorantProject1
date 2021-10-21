@@ -4,7 +4,6 @@
     <TheNavbar />
     <TheShowCase />
     <TheBoxes  :clips="clips"/>
-    <TheTestomonial />
     <TheForm />
     <TheFooter />
   </div>
@@ -30,6 +29,9 @@ export default {
     TheShowCase,
     TheNavbar,
   },
+
+
+
   data() {
     return {
       clips: [],
@@ -65,7 +67,7 @@ export default {
             path: '4.mp4'
           },
       ]
-    },
+    }
 
   }
 }

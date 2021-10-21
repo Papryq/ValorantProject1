@@ -2,10 +2,12 @@
                 <div class="col-xl-3 clip">
                   <h1> {{ clip.name }}</h1> 
                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ut!</p>
+                   <router-link :to="{ name: 'HomeClip', params: { id: clip.name } }">
                     <video muted width="300" height="200" loop="" @mouseover="videoControl(true)" @mouseleave="videoControl(false)" :data-clip-id="clip.id">
                       <source :src="require(`@/assets/video/${clip.path}`)" type="video/mp4" >
                       <source  :src="require(`@/assets/video/${clip.path}`)" type="video/ogg">
                     </video>  
+                   </router-link>
 
                   </div>
 </template>
@@ -24,18 +26,14 @@ export default {
           const videoPlayer = document.querySelector(`[data-clip-id='${this.clip.id}']`);
             if(isHovering == true)
             {
-              console.log('Play')
               videoPlayer.play();
-              video.playbackRate = 1.5;
+              videoPlayer.playbackRate = 1.5;
             }
-            else if (isHovering == false)
+            else
             {
               videoPlayer.pause();
-              console.log('Stop')
             }
             }
-
-
     }
 
 }
@@ -49,6 +47,7 @@ export default {
    padding-right: 0px;
    padding-left: 0px;
    margin-top: 3rem;
+   padding-bottom: 30px;
  }
 
  h1 {
@@ -64,4 +63,10 @@ export default {
 
 
 
+</style>
+
+<style scoped>
+video {
+  cursor: pointer;
+}
 </style>

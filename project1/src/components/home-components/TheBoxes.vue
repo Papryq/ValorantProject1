@@ -14,6 +14,8 @@ export default {
     name: 'TheBoxes',
      props: {
         clips: Array,
+        clipPath: String
+
     },
     components: {
       TheBox,

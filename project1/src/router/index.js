@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Map from '../views/Map.vue'
+import HomeClip from '../views/HomeClip.vue'
 
 const routes = [
   {
@@ -15,6 +16,13 @@ const routes = [
     component: Map,
     props: true,
   },
+  {
+    path: '/:id',
+    name: 'HomeClip',
+    component: HomeClip,
+    props: true
+  }
+
 ]
 
 const router = createRouter({
